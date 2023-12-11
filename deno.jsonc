@@ -1,0 +1,25 @@
+{
+  "tasks": {
+    "dev": "deno run -A --watch src/main.ts",
+    "migrate:up": "deno run -A packages/migration-cli/mod.ts --dir src/migrations up",
+    "migrate:down": "deno run -A packages/migration-cli/mod.ts --dir src/migrations down",
+    "migrate:new": "deno run -A packages/migration-cli/mod.ts --dir src/migrations new",
+    "migrate:clean": "deno run -A packages/migration-cli/mod.ts --dir src/migrations clean",
+    "migrate:list": "deno run -A packages/migration-cli/mod.ts --dir src/migrations list",
+    "migrate:skip": "deno run -A packages/migration-cli/mod.ts --dir src/migrations skip"
+  },
+  "importMap": "./import_map.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true
+  },
+  "lint": {
+    "exclude": [
+      "**/*/*.test.ts"
+    ],
+    "rules": {
+      "exclude": [
+        "no-explicit-any"
+      ]
+    }
+  }
+}

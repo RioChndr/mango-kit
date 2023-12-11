@@ -1,0 +1,5 @@
+.env
+postgres-data
+redis-data
+auth.key
+.vscode
